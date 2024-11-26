@@ -1,4 +1,4 @@
-package com.example.TP1_cloud;
+package com.example.TP1_cloud.Data;
 
 public class Car {
     private String plateNumber;

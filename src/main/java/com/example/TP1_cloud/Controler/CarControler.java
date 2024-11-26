@@ -1,5 +1,7 @@
-package com.example.TP1_cloud;
+package com.example.TP1_cloud.Controler;
 
+import com.example.TP1_cloud.Data.Car;
+import com.example.TP1_cloud.Service.CarService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -7,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-public class CarControlleur {
+public class CarControler {
 
     private CarService carService = new CarService();
 

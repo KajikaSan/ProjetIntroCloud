@@ -1,4 +1,4 @@
-package com.example.TP1_cloud;
+package com.example.TP1_cloud.Service;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
