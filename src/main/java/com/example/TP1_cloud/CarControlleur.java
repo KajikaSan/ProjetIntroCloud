@@ -34,11 +34,6 @@ public class CarControlleur {
     }
 
 
-    @PutMapping(value = "/cars/{plateNumber}")
-    public void rent(
-            @PathVariable("plateNumber") String plateNumber,
-            @RequestParam(value="rent", required = true)boolean rent,
-            @RequestBody Dates dates){
-    }
+
 
 }
