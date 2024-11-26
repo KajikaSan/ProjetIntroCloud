@@ -40,5 +40,9 @@ public class CarService {
                 });
     }
 
+    public static void rent(String plateNumber){
+
+    }
+
 
 }
