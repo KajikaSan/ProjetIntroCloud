@@ -30,11 +30,15 @@ public class CarService {
                 .orElse(null));
     }
 
-    public Optional<Car> getRentCarByPlate( String plateNumber) {
-        return Optional.ofNullable(cars.stream()
-                .filter(car -> car.getPlateNumber().equalsIgnoreCase(plateNumber) && car.isRent())
+    public Optional<Car> RentCarByPlate(String plateNumber) {
+        return cars.stream()
+                .filter(car -> car.getPlateNumber().equalsIgnoreCase(plateNumber))
                 .findFirst()
-                .orElse(null));
+                .map(car -> {
+                    car.setRent(true); // Marque la voiture comme louée
+                    return car;
+                });
     }
+
 
 }

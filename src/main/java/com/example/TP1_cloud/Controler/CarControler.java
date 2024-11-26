@@ -5,6 +5,9 @@ import com.example.TP1_cloud.Service.CarService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -12,6 +15,8 @@ import java.util.Optional;
 public class CarControler {
 
     private CarService carService = new CarService();
+
+    Logger logger = LoggerFactory.getLogger(CarControler.class);
 
     @GetMapping("/cars")
     @ResponseStatus(HttpStatus.OK)
@@ -32,10 +37,7 @@ public class CarControler {
     public Optional<Car> rentOrGetBack(
             @PathVariable("plateNumber") String plateNumber,
             @RequestParam(value="rent", required = true)boolean rent) throws Exception{
-                return carService.getRentCarByPlate(plateNumber);
+                return carService.RentCarByPlate(plateNumber);
     }
-
-
-
 
 }
